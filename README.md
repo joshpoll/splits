@@ -6,7 +6,7 @@ Nightly benchmark for TVM's Relay IR compiler.
 - [x] Edit travis.yml so it builds tvm
 - [ ] Build tvm with llvm
 - [ ] Build tvm with antlr
-- [ ] Build tvm nightly on default travis machine
+- [x] Build tvm daily on default travis machine
 - [ ] Measure tvm compile time
 - [ ] Set up simple gh-pages site
 - [ ] Push a single night of data to the site
