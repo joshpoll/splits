@@ -1,0 +1,12 @@
+before_install:
+  - git clone --recursive https://github.com/dmlc/tvm
+  - sudo apt-get update
+  - sudo apt-get install -y python python-dev python-setuptools gcc libtinfo-dev
+  zlib1g-dev
+
+install:
+  - mkdir build
+  - cp cmake/config.cmake build
+  - cd build
+  - cmake ..
+  - make -j3
