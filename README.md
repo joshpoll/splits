@@ -1,7 +1,8 @@
 # splits
 Nightly benchmark for TVM's Relay IR compiler.
 
-- [ ] Copy Travis yaml from tvm
+- [ ] Copy travis.yml from tvm
+- [ ] Edit travis.yml so it builds tvm
 - [ ] Build tvm nightly on default travis machine
 - [ ] Measure tvm compile time
 - [ ] Set up simple gh-pages site
