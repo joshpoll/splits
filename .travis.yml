@@ -9,6 +9,7 @@ before_install:
   # tvm dependencies
   - sudo apt-get install -y python python-dev python-setuptools gcc libtinfo-dev zlib1g-dev
   # llvm
+  - wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
   - sudo apt-get install libllvm-6.0-ocaml-dev libllvm6.0 llvm-6.0 llvm-6.0-dev llvm-6.0-doc llvm-6.0-examples llvm-6.0-runtime
 
 install:
