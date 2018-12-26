@@ -29,6 +29,8 @@ install:
   - echo set\(USE_LLVM ON\) >> config.cmake
   - echo set\(USE_ANTLR ON\) >> config.cmake
   - cmake ..
-  - make -j3
+  - fmt="run { date = '$(date)', user = '$who', test = '$test', host = '$(hostname)', times = { user = %U, system = %S, elapsed = %e } }"
+  - /usr/bin/time -f "$fmt" -o build_time make -j3
+  - cat build_time
 
 script: true
