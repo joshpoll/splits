@@ -17,7 +17,7 @@ before_install:
   # - sudo apt-get install llvm-6.0
   # antlr
   - cd /usr/local/lib
-  - wget https://www.antlr.org/download/antlr-4.7.1-complete.jar
+  - sudo wget https://www.antlr.org/download/antlr-4.7.1-complete.jar
   - cd -
 
 install:
