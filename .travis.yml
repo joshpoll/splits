@@ -7,14 +7,16 @@ python:
 before_install:
   - git clone --recursive https://github.com/dmlc/tvm
   - cd tvm
-  # # llvm repo
-  # - wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-  # - sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main"
   - sudo apt-get update
+
   # tvm dependencies
   - sudo apt-get install -y python python-dev python-setuptools gcc libtinfo-dev zlib1g-dev
-  # llvm
-  # - sudo apt-get install llvm-6.0
+
+  # java
+  - sudo apt-get install -y openjdk-8-jdk
+  - test -d "/usr/lib/jvm/java-8-openjdk-amd64/jre"
+  - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+
   # antlr
   - cd /usr/local/lib
   - sudo wget https://www.antlr.org/download/antlr-4.7.1-complete.jar
@@ -25,7 +27,7 @@ install:
   - cp cmake/config.cmake build
   - cd build
   - echo set\(USE_LLVM ON\) >> config.cmake
-  # - echo set\\(USE_ANTLR ON\\) >> config.cmake
+  - echo set\\(USE_ANTLR ON\\) >> config.cmake
   - cmake ..
   - make -j3
 
